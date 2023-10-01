@@ -1,13 +1,9 @@
-import express, { Application, NextFunction, Request, Response } from "express";
-import cors from "cors";
+import http from "http";
 import mongoose from "mongoose";
+import app from "./app";
 
-const app: Application = express();
 const port: number = 5000;
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
+const server = http.createServer(app);
 async function makeDBconnect() {
   try {
     await mongoose.connect("mongodb://127.0.0.1:27017/for-practice");
@@ -18,14 +14,6 @@ async function makeDBconnect() {
 }
 makeDBconnect();
 
-app.get("/health", (_req: Request, res: Response, _next: NextFunction) => {
-  res.status(200).json({
-    statusCode: res.statusCode,
-    status: "Success",
-    request: true,
-    data: [],
-  });
-});
-app.listen(port, () => {
+server.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
