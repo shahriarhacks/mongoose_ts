@@ -1,0 +1,19 @@
+{
+  "uid": "UID1",
+  "role": "admin",
+  "email": "ourshahriar@offcarry.com",
+  "phone": "+8801938754040",
+  "password": "PAssWorD_MoNeNaI",
+  "name": {
+    "firstName": "Shahriar",
+    "middleName": "Ahmed",
+    "lastName": "Shifat"
+  },
+  "gender": "male",
+  "contactNo": "01571228994",
+  "emergencyContactNo": "01738210150",
+  "presentAddress": "Bangladesh | China",
+  "permanentAddress": "Bangladesh",
+  "bloodGroup": "A+",
+  "residency": "BGD"
+}

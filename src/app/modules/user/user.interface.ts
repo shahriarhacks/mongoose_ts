@@ -1,6 +1,6 @@
 export interface IUser {
   uid: string;
-  role: "student" | "teacher" | "admin";
+  role: "student" | "teacher" | "stuff" | "admin";
   email: string;
   phone: string;
   password: string;
@@ -9,7 +9,7 @@ export interface IUser {
     middleName?: string;
     lastName: string;
   };
-  dateOfBirth: string;
+  dateOfBirth?: string;
   gender: "male" | "female" | "other";
   contactNo: string;
   emergencyContactNo: string;
